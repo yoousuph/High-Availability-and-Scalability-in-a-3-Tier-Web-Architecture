@@ -201,9 +201,9 @@ INSERT INTO transactions (amount, description) VALUES ('5000', 'Provision');
 ## Step 3: Deploy Backend Application
 
 Run on the terminal:
-
+https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/main/install.sh
 ```bash
-curl -o- https://raw.githubusercontent.com/yoousuph/aws_3tier_architecture/main/install.sh | bash
+curl -o- https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/main/install.sh | bash
 source ~/.bashrc
 nvm install 16
 nvm use 16
