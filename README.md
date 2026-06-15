@@ -16,7 +16,7 @@ The infrastructure follows AWS best practices by isolating resources into public
 
 # Architecture Diagram
 
-![Project Screenshot 1.JPG](C:\Users\REALITY\Documents\Projects\Cloud\aws_3tier_architecture\imgs\1.JPG)
+![3TierArch.PNG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/main/imgs/3TierArch.png)
 
 ---
 
@@ -68,6 +68,8 @@ CIDR Block:
 10.0.0.0/16
 ```
 
+![vpc.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/main/imgs/vpc.JPG)
+
 ### Subnets
 
 #### Public Subnets
@@ -100,6 +102,8 @@ Examples:
 10.0.0.128/24
 10.0.0.160/24
 ```
+
+![vpc.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/main/imgs/vpc.JPG)
 
 ---
 
@@ -135,6 +139,8 @@ Allow:
 | ----- | ---- | ---------- |
 | MySQL | 3306 | Backend SG |
 
+![security_groups.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/0b2a1d232b8bf272907cf6e16dbcfecdeacb79d0/imgs/security_groups.JPG)
+
 ---
 ---
 
@@ -143,8 +149,16 @@ Allow:
 ## Step 1: Create IAM Role
 SSM-for-ec2 IAM Role to be attached to the EC2 Instances in the Private Subnet.
 
+![ssm_iam_role.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/0b2a1d232b8bf272907cf6e16dbcfecdeacb79d0/imgs/ssm_iam_role.JPG)
+
+---
+
 ## Step 1: Create S3 Bucket
 SSM-for-ec2 IAM Role to be attached to the EC2 Instances in the Private Subnet.
+
+![s3_web_files.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/0b2a1d232b8bf272907cf6e16dbcfecdeacb79d0/imgs/s3_web_files.JPG)
+
+---
 
 ## Step 1: Create VPC
 
@@ -157,6 +171,16 @@ Create:
 * 1 Internet Gateway
 * 1 NAT Gateway (in the public subnet)
 * 2 Route Tables (Main Route and Secondary Route to Internet)
+
+![vpc.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/0b2a1d232b8bf272907cf6e16dbcfecdeacb79d0/imgs/vpc.JPG)
+
+![subnets.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/0b2a1d232b8bf272907cf6e16dbcfecdeacb79d0/imgs/subnets.JPG)
+
+![three-tier-igw.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/0b2a1d232b8bf272907cf6e16dbcfecdeacb79d0/imgs/three-tier-igw.JPG)
+
+![nat_gw.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/0b2a1d232b8bf272907cf6e16dbcfecdeacb79d0/imgs/nat_gw.JPG)
+
+![main_rt.JPG](https://github.com/yoousuph/High-Availability-and-Scalability-in-a-3-Tier-Web-Architecture/blob/0b2a1d232b8bf272907cf6e16dbcfecdeacb79d0/imgs/main_rt.JPG)
 
 ---
 
